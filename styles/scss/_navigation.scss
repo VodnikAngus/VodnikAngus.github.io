@@ -4,20 +4,37 @@
 
 #sidebar {
   z-index: 10;
+  .background {
+    position: fixed;
+    opacity: 0;
+    z-index: 1;
+    pointer-events: none;
+  }
   &.active {
-    max-width: calc(15rem + #{$nav-width});
+    ul {
+      max-width: calc(15rem + #{$nav-width});
+    }
     span {
       opacity: 1;
     }
+    .background {
+      opacity: 1;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(black, 0.5);
+      pointer-events: all;
+    }
   }
-  transition: all 0.2s;
   position: fixed;
   height: 100%;
-  background-color: $color-alt-bg;
-  max-width: $nav-width;
   user-select: none;
 
   ul {
+    transition: all 0.2s;
+    position: fixed;
+    max-width: $nav-width;
+    background-color: $color-alt-bg;
+    z-index: 10;
     display: flex;
     flex-direction: column;
     height: 100%;

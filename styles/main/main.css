@@ -71,19 +71,22 @@
 
 #sidebar {
   z-index: 10;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
   position: fixed;
   height: 100%;
-  background-color: #222222;
-  max-width: 5rem;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
 }
 
-#sidebar.active {
+#sidebar .background {
+  position: fixed;
+  opacity: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+#sidebar.active ul {
   max-width: calc(15rem + 5rem);
 }
 
@@ -91,7 +94,21 @@
   opacity: 1;
 }
 
+#sidebar.active .background {
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: all;
+}
+
 #sidebar ul {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  position: fixed;
+  max-width: 5rem;
+  background-color: #222222;
+  z-index: 10;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
