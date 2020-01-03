@@ -3,7 +3,7 @@
 @import "hamburger";
 
 #sidebar {
-  z-index: 100;
+  z-index: 10;
   &.active {
     max-width: calc(15rem + #{$nav-width});
     span {

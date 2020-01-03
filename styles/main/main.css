@@ -70,7 +70,7 @@
 }
 
 #sidebar {
-  z-index: 100;
+  z-index: 10;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   position: fixed;
@@ -196,6 +196,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  z-index: 100;
 }
 
 .langScreen ul {

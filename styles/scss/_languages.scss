@@ -9,6 +9,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 100;
   ul {
     background-color: $color-alt-bg;
     border-radius: 0.5rem;
