@@ -60,12 +60,30 @@
             transform: translateY(200%) scaleX(0.8);
   }
   .burger.active div:nth-child(1) {
-    -webkit-transform: scaleX(0.8) translateY(200%);
-            transform: scaleX(0.8) translateY(200%);
+    -webkit-transform: scaleX(0.8) translateY(calc(200%));
+            transform: scaleX(0.8) translateY(calc(200%));
   }
   .burger.active div:nth-child(3) {
     -webkit-transform: scaleX(0.8) translateY(0%);
             transform: scaleX(0.8) translateY(0%);
+  }
+}
+
+@-webkit-keyframes op {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes op {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 
@@ -91,7 +109,14 @@
 }
 
 #sidebar.active span {
+  -webkit-animation: op 0.2s 0.2s forwards;
+          animation: op 0.2s 0.2s forwards;
+}
+
+#sidebar.active .burger + span {
   opacity: 1;
+  -webkit-animation: none;
+          animation: none;
 }
 
 #sidebar.active .background {
@@ -103,8 +128,8 @@
 }
 
 #sidebar ul {
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
   position: fixed;
   max-width: 5rem;
   background-color: #222222;
@@ -228,8 +253,8 @@
       -ms-flex-direction: column;
           flex-direction: column;
   min-width: 20rem;
-  -webkit-box-shadow: 6px 6px 24px rgba(0, 0, 0, 0.5);
-          box-shadow: 6px 6px 24px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.3);
+          box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 .langScreen ul span {
@@ -252,6 +277,21 @@
   background-color: #333333;
 }
 
+#bubbles {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+}
+
+#bubbles div {
+  position: absolute;
+  background-color: #2f5866;
+  border-radius: 100000px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -261,6 +301,9 @@
 
 html {
   font-size: 16px;
+  -ms-scroll-snap-type: y proximity;
+      scroll-snap-type: y proximity;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -273,5 +316,48 @@ body {
   html {
     font-size: 10px;
   }
+}
+
+main {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main > div {
+  position: relative;
+  min-width: 100%;
+  height: 100%;
+}
+
+main > div:nth-child(1) {
+  background: #203a43;
+}
+
+main > div:nth-child(2) {
+  background: -webkit-gradient(linear, left top, left bottom, from(#396afc), to(#2948ff));
+  background: linear-gradient(#396afc, #2948ff);
+}
+
+main > div:nth-child(3) {
+  background-color: darkcyan;
+}
+
+.scroller {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 0;
+  width: 100%;
+}
+
+.scroller div {
+  width: 100%;
+  scroll-snap-align: start;
 }
 /*# sourceMappingURL=main.css.map */

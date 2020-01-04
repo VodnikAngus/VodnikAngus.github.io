@@ -2,6 +2,15 @@
 @import "values";
 @import "hamburger";
 
+@keyframes op {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 #sidebar {
   z-index: 10;
   .background {
@@ -15,7 +24,11 @@
       max-width: calc(15rem + #{$nav-width});
     }
     span {
+      animation: op 0.2s 0.2s forwards;
+    }
+    .burger + span {
       opacity: 1;
+      animation: none;
     }
     .background {
       opacity: 1;
@@ -30,7 +43,7 @@
   user-select: none;
 
   ul {
-    transition: all 0.2s;
+    transition: all 0.4s;
     position: fixed;
     max-width: $nav-width;
     background-color: $color-alt-bg;

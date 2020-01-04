@@ -61,7 +61,7 @@
     &.active {
       div {
         &:nth-child(1) {
-          transform: scaleX(0.8) translateY(200%);
+          transform: scaleX(0.8) translateY(calc(200%));
         }
 
         &:nth-child(3) {
