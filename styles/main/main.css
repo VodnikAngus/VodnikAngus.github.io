@@ -332,12 +332,15 @@
   background-color: #2f5866;
   background-color: #3f7181;
   border-radius: 100000px;
+  opacity: var(--opacity);
   width: calc(var(--R) * 1px);
   height: calc(var(--R) * 1px);
   left: calc(var(--left) * (100% - var(--R) * 1px));
   top: 0;
-  -webkit-animation: to-top calc(var(--top) * var(--speed) * 20s) ease-out, from-bottom 20s calc(var(--top) * var(--speed) * 20s) infinite ease-out;
-          animation: to-top calc(var(--top) * var(--speed) * 20s) ease-out, from-bottom 20s calc(var(--top) * var(--speed) * 20s) infinite ease-out;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+  -webkit-animation: to-top calc(var(--top) * calc(var(--speed) * calc(var(--speed) * 20s))) ease-out, from-bottom calc(var(--speed) * calc(var(--speed) * 20s)) calc(var(--top) * calc(var(--speed) * calc(var(--speed) * 20s))) infinite ease-out;
+          animation: to-top calc(var(--top) * calc(var(--speed) * calc(var(--speed) * 20s))) ease-out, from-bottom calc(var(--speed) * calc(var(--speed) * 20s)) calc(var(--top) * calc(var(--speed) * calc(var(--speed) * 20s))) infinite ease-out;
 }
 
 :root {
