@@ -18,7 +18,7 @@ function createBubble() {
 
 window.onload = () => {
   nBubbles = Math.ceil(bubblesDiv.offsetWidth / 100);
-  console.log(nBubbles);
+
   for (let i = 0; i <= nBubbles; i++) {
     bubbles = [...bubbles, createBubble()];
   }
@@ -27,13 +27,14 @@ window.onload = () => {
 
 function bubblesResized() {
   let newBubbles = Math.ceil(bubblesDiv.offsetWidth / 100);
+  
   if (newBubbles <= nBubbles) {
     for (let index = 0; index < bubbles.length; index++) {
       bubbles[index].style.opacity = index < newBubbles ? null : 0;
     }
     return;
   }
-  console.log(`${nBubbles} ${newBubbles}`);
+
   for (let index = 0; index < newBubbles - nBubbles; index++) {
     bubbles = [...bubbles, createBubble()];
   }
