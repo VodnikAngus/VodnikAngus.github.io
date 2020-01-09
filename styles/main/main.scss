@@ -2,7 +2,7 @@
 @import "../scss/navigation";
 @import "../scss/languages";
 @import "../scss/bubbles";
-
+@import "../scss/themes";
 * {
   margin: 0;
   padding: 0;
@@ -11,7 +11,6 @@
 
 html {
   font-size: 16px;
-  scroll-snap-type: y proximity;
   scroll-behavior: smooth;
 }
 
@@ -34,17 +33,43 @@ main {
   height: 100%;
   display: flex;
   & > div {
+    padding-left: $nav-width;
     position: relative;
     min-width: 100%;
     height: 100%;
     &:nth-child(1) {
-      background: #203a43;
+      background: #305a68;
     }
     &:nth-child(2) {
-      background: linear-gradient(#396afc, #2948ff);
+      background: linear-gradient(90deg, #153081, #233597);
     }
     &:nth-child(3) {
       background-color: darkcyan;
+    }
+  }
+  #projects {
+    display: flex;
+    justify-content: stretch;
+    padding: $padding $padding/2;
+    padding-left: $nav-width + $padding/2;
+    & > div {
+      flex: 1;
+      margin: 0 $padding/2;
+      height: 100%;
+      background-color: $color-bg;
+    }
+  }
+}
+@media (max-width: 500px) {
+  main #projects {
+    flex-direction: column;
+
+    padding: $padding/2 $padding;
+    padding-left: $nav-width + $padding/2;
+
+    & > div {
+      flex: 1;
+      margin: $padding/2 0;
     }
   }
 }
@@ -58,6 +83,5 @@ main {
   width: 100%;
   div {
     width: 100%;
-    scroll-snap-align: start;
   }
 }

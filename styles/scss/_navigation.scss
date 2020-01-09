@@ -43,7 +43,7 @@
   user-select: none;
 
   ul {
-    transition: all 0.4s;
+    transition: all 0.2s, min-width 0.4s;
     position: fixed;
     max-width: $nav-width;
     background-color: $color-alt-bg;
@@ -101,12 +101,10 @@
           }
         }
       }
-      &:first-child {
-        margin-bottom: auto;
-      }
-      &:last-child {
-        margin-top: auto;
-      }
     }
+  }
+
+  .divider {
+    margin: auto 0;
   }
 }

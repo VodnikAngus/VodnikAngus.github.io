@@ -1,3 +1,25 @@
+@function border($R, $v) {
+  @return calc(#{$v} * (100% - #{$R} * 1px));
+}
+
+@keyframes to-top {
+  from {
+    transform: translateY(calc(var(--top) * 100vh));
+  }
+  to {
+    transform: translateY(calc(var(--R) * -1px));
+  }
+}
+
+@keyframes from-bottom {
+  from {
+    transform: translateY(calc(100vh + var(--R) * 1px));
+  }
+  to {
+    transform: translateY(calc(var(--R) * -1px));
+  }
+}
+
 #bubbles {
   width: 100%;
   height: 100%;
@@ -5,9 +27,22 @@
   overflow: hidden;
   top: 0;
   left: 0;
-  div {
+  .bubble {
+    $curve: ease-out;
+    $time: 20s;
+    will-change: transform;
     position: absolute;
     background-color: #2f5866;
+    background-color: #3f7181;
     border-radius: 100000px;
+
+    width: calc(var(--R) * 1px);
+    height: calc(var(--R) * 1px);
+    left: border(var(--R), var(--left));
+    top: 0;
+
+    animation: to-top calc(var(--top) * var(--speed) * #{$time}) $curve,
+      from-bottom $time calc(var(--top) * var(--speed) * #{$time}) infinite
+        $curve;
   }
 }

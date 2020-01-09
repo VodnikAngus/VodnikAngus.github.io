@@ -34,28 +34,9 @@ window.addEventListener("scroll", function() {
     vw(100)}px)`;
 });
 
-function scrollRight() {
+function scrollL() {
   let min;
   for (slide of main.children) {
-    console.log((window.scrollY / vh(100)) * vw(100) + " " + slide.offsetLeft);
-    if (Math.ceil((window.scrollY / vh(100)) * vw(100)) < slide.offsetLeft) {
-      if (min == null) min = slide;
-      else min = min.offsetLeft < slide.offsetLeft ? min : slide;
-    }
-  }
-  if (min == null) return;
-  window.scroll({
-    top: (min.offsetLeft * vh(100)) / vw(100),
-    left: 0,
-    behavior: "smooth"
-  });
-  min = null;
-}
-
-function scrollLeft() {
-  let min;
-  for (slide of main.children) {
-    console.log((window.scrollY / vh(100)) * vw(100) + " " + slide.offsetLeft);
     if (
       Math.floor((window.scrollY / vh(100)) * vw(100)) >
       Math.floor(slide.offsetLeft)
@@ -72,7 +53,25 @@ function scrollLeft() {
   });
   min = null;
 }
+
+function scrollR() {
+  let min;
+  for (slide of main.children) {
+    if (Math.ceil((window.scrollY / vh(100)) * vw(100)) < slide.offsetLeft) {
+      if (min == null) min = slide;
+      else min = min.offsetLeft < slide.offsetLeft ? min : slide;
+    }
+  }
+  if (min == null) return;
+  window.scroll({
+    top: (min.offsetLeft * vh(100)) / vw(100),
+    left: 0,
+    behavior: "smooth"
+  });
+  min = null;
+}
+
 document.addEventListener("keyup", event => {
-  if (event.keyCode == 37) scrollLeft();
-  if (event.keyCode == 39) scrollRight();
+  if (event.keyCode == 37) scrollL();
+  if (event.keyCode == 39) scrollR();
 });

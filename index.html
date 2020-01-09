@@ -13,7 +13,6 @@
         default:
           var language =
             window.navigator.userLanguage || window.navigator.language;
-          console.log(language);
           localStorage.setItem("language", language === "sr" ? "sr" : "en");
           window.location.replace(language === "sr" ? "sr" : "en");
           break;

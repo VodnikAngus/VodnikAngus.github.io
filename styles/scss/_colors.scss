@@ -1,5 +1,5 @@
-$color-bg: #121212;
-$color-alt-bg: #222222;
-$color-alt-bg-hover: #333333;
-$color-fg: #ffffff;
-$color-fg-focus: #dddddd;
+$color-bg: var(--color-bg, #eeeeee);
+$color-alt-bg: var(--color-alt-bg, #dddddd);
+$color-alt-bg-hover: var(--color-alt-bg-hover, #dddddd);
+$color-fg: var(--color-fg, #333333);
+$color-fg-focus: var(--color-fg-focus, #111111);

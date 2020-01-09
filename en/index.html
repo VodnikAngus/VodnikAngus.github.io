@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Portfolio</title>
-    <link rel="stylesheet" href="/styles/main/main.css" />
+    <link rel="stylesheet" href="../styles/main/main.css" />
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
@@ -30,22 +30,30 @@
             <span>Menu</span>
           </a>
         </li>
+        <div class="divider"></div>
         <li>
-          <a href="#">
+          <a href="#" onclick="toggleBurger(false)">
             <i class="material-icons">home</i>
             <span>Home</span>
           </a>
         </li>
         <li>
-          <a href="#projects-slide">
+          <a href="#projects-slide" onclick="toggleBurger(false)">
             <i class="material-icons">work</i>
             <span>Projects</span>
           </a>
         </li>
         <li>
-          <a href="#about-me-slide">
+          <a href="#about-me-slide" onclick="toggleBurger(false)">
             <i class="material-icons">person</i>
             <span>About me</span>
+          </a>
+        </li>
+        <div class="divider"></div>
+        <li>
+          <a onclick="changeTheme()">
+            <i class="material-icons">color_lens</i>
+            <span>Tema</span>
           </a>
         </li>
         <li>
@@ -63,9 +71,10 @@
       <div id="projects"></div>
       <div id="about-me"></div>
     </main>
-    <script src="/scripts/languages.js"></script>
-    <script src="/scripts/sidebar.js"></script>
-    <script src="/scripts/scroll.js"></script>
-    <script src="/scripts/bubbles.js"></script>
+    <script src="../scripts/themes.js"></script>
+    <script src="../scripts/languages.js"></script>
+    <script src="../scripts/sidebar.js"></script>
+    <script src="../scripts/scroll.js"></script>
+    <script src="../scripts/bubbles.js"></script>
   </body>
 </html>
