@@ -339,8 +339,8 @@
   top: 0;
   -webkit-transition: opacity 0.2s;
   transition: opacity 0.2s;
-  -webkit-animation: to-top calc(var(--top) * calc(var(--speed) * calc(var(--speed) * 20s))) ease-out, from-bottom calc(var(--speed) * calc(var(--speed) * 20s)) calc(var(--top) * calc(var(--speed) * calc(var(--speed) * 20s))) infinite ease-out;
-          animation: to-top calc(var(--top) * calc(var(--speed) * calc(var(--speed) * 20s))) ease-out, from-bottom calc(var(--speed) * calc(var(--speed) * 20s)) calc(var(--top) * calc(var(--speed) * calc(var(--speed) * 20s))) infinite ease-out;
+  -webkit-animation: to-top calc(var(--top) * calc(var(--speed) * calc(var(--speed) * 20s))) cubic-bezier(0.4, 0, 0.2, 1), from-bottom calc(var(--speed) * calc(var(--speed) * 20s)) calc(var(--top) * calc(var(--speed) * calc(var(--speed) * 20s))) infinite cubic-bezier(0.4, 0, 0.2, 1);
+          animation: to-top calc(var(--top) * calc(var(--speed) * calc(var(--speed) * 20s))) cubic-bezier(0.4, 0, 0.2, 1), from-bottom calc(var(--speed) * calc(var(--speed) * 20s)) calc(var(--top) * calc(var(--speed) * calc(var(--speed) * 20s))) infinite cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 :root {
