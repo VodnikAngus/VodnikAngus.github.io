@@ -8,10 +8,8 @@ const vw = v =>
 scroller = document.createElement("div");
 scroller.classList.add("scroller");
 main = document.getElementById("slides");
-document.documentElement.style.setProperty(
-  "--p100",
-  document.documentElement.clientHeight + "px"
-);
+document.documentElement.style.setProperty("--vh", vh(1));
+document.documentElement.style.setProperty("--vw", vw(1));
 
 for (slide of main.children) {
   let scroll = document.createElement("div");
@@ -33,10 +31,8 @@ function resized() {
     );
     i++;
   }
-  document.documentElement.style.setProperty(
-    "--p100",
-    document.documentElement.clientHeight + "px"
-  );
+  document.documentElement.style.setProperty("--vh", vh(1));
+  document.documentElement.style.setProperty("--vw", vw(1));
 }
 
 window.addEventListener("scroll", function() {
