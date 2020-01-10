@@ -11,7 +11,12 @@
   }
 }
 
+:root {
+  --p100: 100vh;
+}
+
 #sidebar {
+  transform: none;
   z-index: 10;
   .background {
     position: fixed;
@@ -43,8 +48,11 @@
   user-select: none;
 
   ul {
+    transform: none;
     transition: all 0.2s, min-width 0.4s;
     position: fixed;
+    top: 0;
+    left: 0;
     max-width: $nav-width;
     background-color: $color-alt-bg;
     z-index: 10;

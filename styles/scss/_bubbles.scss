@@ -1,6 +1,6 @@
 @keyframes to-top {
   from {
-    transform: translateY(calc(var(--top) * 100vh));
+    transform: translateY(calc(var(--top) * var(--p100)));
   }
   to {
     transform: translateY(calc(var(--R) * -1px));
@@ -9,7 +9,7 @@
 
 @keyframes from-bottom {
   from {
-    transform: translateY(calc(100vh + var(--R) * 1px));
+    transform: translateY(calc(var(--p100) + var(--R) * 1px));
   }
   to {
     transform: translateY(calc(var(--R) * -1px));
@@ -23,6 +23,7 @@
   overflow: hidden;
   top: 0;
   left: 0;
+  --p100: calc(100vh);
   .bubble {
     $curve: cubic-bezier(0.4, 0, 0.2, 1);
     $time: calc(var(--speed) * 20s);
@@ -43,5 +44,12 @@
 
     transition: opacity 0.2s;
     animation: to-top $delay $curve, from-bottom $speed $delay infinite $curve;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #bubbles .bubble {
+    transform: translateY(calc(var(--top) * var(--p100)));
+    animation: none;
   }
 }

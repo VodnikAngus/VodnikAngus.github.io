@@ -8,10 +8,14 @@ const vw = v =>
 scroller = document.createElement("div");
 scroller.classList.add("scroller");
 main = document.getElementById("slides");
+document.documentElement.style.setProperty(
+  "--p100",
+  document.documentElement.clientHeight + "px"
+);
 
 for (slide of main.children) {
   let scroll = document.createElement("div");
-  scroll.style.height = slide.offsetWidth + "px";
+  //scroll.style.height = slide.offsetWidth + "px";
   scroll.id = slide.id + "-slide";
   scroller.appendChild(scroll);
 }
@@ -23,10 +27,16 @@ new ResizeObserver(resized).observe(main);
 function resized() {
   let i = 0;
   for (slide of main.children) {
-    scroller.children[i].style.height =
-      (slide.offsetWidth * vh(100)) / vw(100) + "px";
+    scroller.children[i].style.setProperty(
+      "--height",
+      (slide.offsetWidth * vh(100)) / vw(100) + "px"
+    );
     i++;
   }
+  document.documentElement.style.setProperty(
+    "--p100",
+    document.documentElement.clientHeight + "px"
+  );
 }
 
 window.addEventListener("scroll", function() {

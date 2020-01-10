@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, minimum-scale=1.0, initial-scale=1.0"
+    />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Portfolio</title>
     <link rel="stylesheet" href="../styles/main/main.css" />
@@ -64,13 +67,15 @@
         </li>
       </ul>
     </nav>
-    <main id="slides">
-      <div id="home">
-        <div id="bubbles"></div>
-      </div>
-      <div id="projects"></div>
-      <div id="about-me"></div>
-    </main>
+    <div class="fixed">
+      <main id="slides">
+        <div id="home">
+          <div id="bubbles"></div>
+        </div>
+        <div id="projects"></div>
+        <div id="about-me"></div>
+      </main>
+    </div>
     <script src="../scripts/themes.js"></script>
     <script src="../scripts/languages.js"></script>
     <script src="../scripts/sidebar.js"></script>
