@@ -25,15 +25,15 @@
   left: 0;
   --p100: calc(100vh);
   .bubble {
-    $curve: cubic-bezier(0.4, 0, 0.2, 1);
-    $time: calc(var(--speed) * 20s);
+    $curve: linear;
+    //cubic-bezier(0.4, 0, 0.2, 1);
+    $time: calc(var(--speed) * 80s);
     $speed: calc(var(--speed) * #{$time});
     $delay: calc(var(--top) * #{$speed});
 
     will-change: transform;
     position: absolute;
-    background-color: #2f5866;
-    background-color: #3f7181;
+    background-color: #3d405f;
     border-radius: 100000px;
 
     opacity: var(--opacity);
@@ -45,6 +45,26 @@
     transition: opacity 0.2s;
     animation: to-top $delay $curve, from-bottom $speed $delay infinite $curve;
   }
+}
+.accent-bubble {
+  position: absolute;
+  background-color: $color-accent;
+  border-radius: 100000px;
+}
+
+#home .accent-bubble:nth-of-type(2) {
+  height: 80vmin;
+  width: 80vmin;
+
+  top: -20vmin;
+  left: -45vmin;
+}
+#home .accent-bubble:nth-of-type(3) {
+  height: 80vmin;
+  width: 80vmin;
+
+  bottom: -65vmin;
+  left: 0vh;
 }
 
 @media (prefers-reduced-motion: reduce) {

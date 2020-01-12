@@ -107,7 +107,7 @@
 }
 
 #sidebar.active ul {
-  max-width: calc(15rem + 3rem);
+  max-width: calc(15rem + 4rem);
 }
 
 #sidebar.active span {
@@ -137,7 +137,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  max-width: 3rem;
+  max-width: 4rem;
   background-color: var(--color-alt-bg, #dddddd);
   z-index: 10;
   display: -webkit-box;
@@ -151,11 +151,11 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: calc(3rem * 1 / 8) 0;
+  padding: calc(4rem * 1 / 8) 0;
 }
 
 #sidebar ul li {
-  --height: calc(3rem * 1 / 2.4);
+  --height: calc(4rem * 1 / 2.4);
   list-style: none;
 }
 
@@ -178,22 +178,22 @@
 }
 
 #sidebar ul li a i.material-icons {
-  font-size: calc(3rem * 1 / 2);
-  margin: calc(3rem * 1 / 8) calc(3rem * 1 / 4);
+  font-size: calc(4rem * 1 / 2);
+  margin: calc(4rem * 1 / 8) calc(4rem * 1 / 4);
   margin-right: 0;
 }
 
 #sidebar ul li a .burger {
-  font-size: calc(3rem * 1 / 3);
-  margin: calc(3rem * 1 / 8) calc(3rem * 1 / 4);
+  font-size: calc(4rem * 1 / 3);
+  margin: calc(4rem * 1 / 8) calc(4rem * 1 / 4);
   margin-right: 0;
 }
 
 #sidebar ul li a span {
   background-color: var(--color-alt-bg, #dddddd);
-  padding-left: calc(3rem * 1 / 2);
-  font-size: calc(3rem * 1.5 / 4);
-  height: calc(3rem * 3 / 4);
+  padding-left: calc(4rem * 1 / 2);
+  font-size: calc(4rem * 1.5 / 4);
+  height: calc(4rem * 3 / 4);
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   -webkit-box-align: center;
@@ -336,8 +336,7 @@
 #bubbles .bubble {
   will-change: transform;
   position: absolute;
-  background-color: #2f5866;
-  background-color: #3f7181;
+  background-color: #3d405f;
   border-radius: 100000px;
   opacity: var(--opacity);
   width: calc(var(--R) * 1px);
@@ -346,8 +345,28 @@
   top: 0;
   -webkit-transition: opacity 0.2s;
   transition: opacity 0.2s;
-  -webkit-animation: to-top calc(var(--top) * calc(var(--speed) * calc(var(--speed) * 20s))) cubic-bezier(0.4, 0, 0.2, 1), from-bottom calc(var(--speed) * calc(var(--speed) * 20s)) calc(var(--top) * calc(var(--speed) * calc(var(--speed) * 20s))) infinite cubic-bezier(0.4, 0, 0.2, 1);
-          animation: to-top calc(var(--top) * calc(var(--speed) * calc(var(--speed) * 20s))) cubic-bezier(0.4, 0, 0.2, 1), from-bottom calc(var(--speed) * calc(var(--speed) * 20s)) calc(var(--top) * calc(var(--speed) * calc(var(--speed) * 20s))) infinite cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-animation: to-top calc(var(--top) * calc(var(--speed) * calc(var(--speed) * 80s))) linear, from-bottom calc(var(--speed) * calc(var(--speed) * 80s)) calc(var(--top) * calc(var(--speed) * calc(var(--speed) * 80s))) infinite linear;
+          animation: to-top calc(var(--top) * calc(var(--speed) * calc(var(--speed) * 80s))) linear, from-bottom calc(var(--speed) * calc(var(--speed) * 80s)) calc(var(--top) * calc(var(--speed) * calc(var(--speed) * 80s))) infinite linear;
+}
+
+.accent-bubble {
+  position: absolute;
+  background-color: #c16059;
+  border-radius: 100000px;
+}
+
+#home .accent-bubble:nth-of-type(2) {
+  height: 80vmin;
+  width: 80vmin;
+  top: -20vmin;
+  left: -45vmin;
+}
+
+#home .accent-bubble:nth-of-type(3) {
+  height: 80vmin;
+  width: 80vmin;
+  bottom: -65vmin;
+  left: 0vh;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -362,6 +381,32 @@
 :root {
   --color-bg: #eeeeee;
   --color-alt-bg: #dddddd;
+}
+
+@-webkit-keyframes arrows {
+  from {
+    opacity: 1;
+  }
+  45%,
+  55% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes arrows {
+  from {
+    opacity: 1;
+  }
+  45%,
+  55% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 * {
@@ -379,12 +424,14 @@
 html {
   font-size: 16px;
   scroll-behavior: smooth;
+  -ms-scroll-snap-type: x proximity;
+      scroll-snap-type: x proximity;
 }
 
 body {
   background-color: var(--color-bg, #eeeeee);
   color: var(--color-fg, #333333);
-  font-family: "Lato", sans-serif;
+  font-family: "Roboto slab", sans-serif;
 }
 
 @media (max-width: 500px) {
@@ -404,14 +451,24 @@ main {
 }
 
 main > div {
-  padding-left: 3rem;
+  padding-left: 4rem;
   position: relative;
   min-width: 100%;
   height: 100%;
+  scroll-snap-align: start;
 }
 
 main > div:nth-child(1) {
-  background: #305a68;
+  background: #2b2d42;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 main > div:nth-child(2) {
@@ -431,7 +488,7 @@ main #projects {
       -ms-flex-pack: stretch;
           justify-content: stretch;
   padding: 2rem 1rem;
-  padding-left: 4rem;
+  padding-left: 5rem;
 }
 
 main #projects > div {
@@ -450,7 +507,7 @@ main #projects > div {
         -ms-flex-direction: column;
             flex-direction: column;
     padding: 1rem 2rem;
-    padding-left: 4rem;
+    padding-left: 5rem;
   }
   main #projects > div {
     -webkit-box-flex: 1;
@@ -480,9 +537,101 @@ main #projects > div {
   height: calc(100 * var(--vh));
 }
 
+.center {
+  position: relative;
+  font-weight: 400;
+  z-index: 1;
+  color: white;
+}
+
+.center h1 {
+  font-size: 6rem;
+  font-weight: 400;
+  padding: 1rem 0;
+}
+
+.center h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.center .accent-bubble {
+  top: -4rem;
+  right: -2.5rem;
+  height: 15rem;
+  width: 15rem;
+  z-index: -1;
+}
+
 html,
 body {
   overflow-y: hidden;
+}
+
+.arrow span {
+  pointer-events: none;
+  color: white;
+  position: absolute;
+  left: calc(50% + 4rem/ 2);
+  bottom: 3vh;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 2rem;
+}
+
+.arrow span i.material-icons {
+  font-size: inherit;
+}
+
+.arrow .scroll-down {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.arrow .scroll-down i.material-icons {
+  margin-top: -0.5rem;
+  font-size: 2.5rem;
+}
+
+.arrow .swipe-right {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  opacity: 1;
+}
+
+.arrow .swipe-right i {
+  margin: 0 -0.5rem;
+  -webkit-animation: arrows 5s ease-in-out infinite;
+          animation: arrows 5s ease-in-out infinite;
+}
+
+.arrow .swipe-right i:first-child {
+  margin-left: 0;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+.arrow .swipe-right i:nth-child(2) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.arrow .swipe-right i:nth-child(3) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 
 @media (pointer: fine) {
@@ -503,6 +652,12 @@ body {
   .scroller div {
     height: var(--height);
     width: 0;
+  }
+  .arrow .scroll-down {
+    opacity: 1;
+  }
+  .arrow .swipe-right {
+    opacity: 0;
   }
 }
 /*# sourceMappingURL=main.css.map */
