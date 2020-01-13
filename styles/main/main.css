@@ -429,7 +429,7 @@ html {
 }
 
 body {
-  background-color: var(--color-bg, #eeeeee);
+  background-color: #2b2d42;
   color: var(--color-fg, #333333);
   font-family: "Roboto slab", sans-serif;
 }
@@ -456,6 +456,7 @@ main > div {
   min-width: 100%;
   height: 100%;
   scroll-snap-align: start;
+  background: #2b2d42;
 }
 
 main > div:nth-child(1) {
@@ -469,15 +470,6 @@ main > div:nth-child(1) {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-main > div:nth-child(2) {
-  background: -webkit-gradient(linear, left top, right top, from(#153081), to(#233597));
-  background: linear-gradient(90deg, #153081, #233597);
-}
-
-main > div:nth-child(3) {
-  background-color: darkcyan;
 }
 
 main #projects {
@@ -653,11 +645,46 @@ body {
     height: var(--height);
     width: 0;
   }
+  .arrow {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+  }
   .arrow .scroll-down {
     opacity: 1;
   }
   .arrow .swipe-right {
     opacity: 0;
+  }
+  .arrows {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+    margin: 1rem;
+  }
+  .arrows button {
+    cursor: pointer;
+    outline: none;
+    width: 3rem;
+    height: 3rem;
+    color: white;
+    border: 0;
+    font-size: 2rem;
+    margin: 0.5rem 0;
+    margin-right: 0.5rem;
+    border-radius: 1000px;
+    background-color: #c16059;
+    -webkit-transition: background-color 0.2s;
+    transition: background-color 0.2s;
+  }
+  .arrows button:hover {
+    background-color: #c46962;
   }
 }
 /*# sourceMappingURL=main.css.map */
