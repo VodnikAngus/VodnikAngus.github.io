@@ -439,7 +439,6 @@
 }
 
 #about-me .container .profile img {
-  margin: 0.5rem;
   margin-right: 1rem;
   border-radius: 2000px;
 }
@@ -486,6 +485,10 @@
   background-color: var(--color-alt-bg, #dddddd);
   border-radius: 2000px;
   position: relative;
+}
+
+#about-me .container .charts .chart:first-child {
+  margin: 0;
 }
 
 #about-me .container .charts .chart::before {

@@ -32,7 +32,6 @@
       margin-bottom: 1rem;
 
       img {
-        margin: 0.5rem;
         margin-right: 1rem;
         border-radius: 2000px;
       }
@@ -51,6 +50,9 @@
       margin-bottom: 1rem;
       flex-wrap: wrap;
       .chart {
+        &:first-child {
+          margin: 0;
+        }
         box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
         display: flex;
         align-items: center;
