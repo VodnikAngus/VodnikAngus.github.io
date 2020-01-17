@@ -654,7 +654,7 @@ body {
   --scroll: 0;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 750px) {
   html {
     font-size: 10px;
   }
@@ -712,7 +712,7 @@ main #projects > div {
   background-color: var(--color-bg, #eeeeee);
 }
 
-@media (max-width: 500px) {
+@media (max-aspect-ratio: 3 / 2) {
   main #projects {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
