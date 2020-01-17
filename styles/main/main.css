@@ -482,6 +482,8 @@
 }
 
 #about-me .container .profile img {
+  width: 7.5rem;
+  height: 7.5rem;
   margin-right: 1rem;
   border-radius: 2000px;
 }
