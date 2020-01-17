@@ -421,6 +421,187 @@
   --color-alt-bg: #dddddd;
 }
 
+#about-me {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+#about-me .accent-bubble {
+  z-index: 0;
+}
+
+#about-me .accent-bubble:nth-of-type(1) {
+  right: -25vmin;
+  top: -10vmin;
+  width: 50vmin;
+  height: 50vmin;
+}
+
+#about-me .accent-bubble:nth-of-type(2) {
+  bottom: -85vmin;
+  width: 100vmin;
+  height: 100vmin;
+}
+
+#about-me .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 1;
+  width: 90%;
+  max-width: 50rem;
+}
+
+#about-me .container .profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1rem;
+}
+
+#about-me .container .profile img {
+  margin-right: 1rem;
+  border-radius: 2000px;
+}
+
+#about-me .container .profile h1 {
+  line-height: 1.2;
+}
+
+#about-me .container .profile h3 {
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+#about-me .container .charts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 1rem;
+  max-width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#about-me .container .charts .group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#about-me .container .charts .chart {
+  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0.5rem;
+  width: 7rem;
+  height: 7rem;
+  background-color: var(--color-alt-bg, #dddddd);
+  border-radius: 2000px;
+  position: relative;
+}
+
+#about-me .container .charts .chart:first-child {
+  margin: 0;
+}
+
+#about-me .container .charts .chart::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 60%;
+  height: 60%;
+  border: 0.5rem #c16059 solid;
+  border-radius: 2000px;
+}
+
+#about-me .container .charts .chart div {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-clip-path: polygon(50% 0, 0 0, 0 100%, 50% 100%);
+          clip-path: polygon(50% 0, 0 0, 0 100%, 50% 100%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#about-me .container .charts .chart div::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  border-radius: 0 2000px 2000px 0;
+  background-color: var(--color-alt-bg, #dddddd);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transform: rotate(calc(var(--deg) * 1deg));
+          transform: rotate(calc(var(--deg) * 1deg));
+}
+
+#about-me .container .charts .chart span {
+  z-index: 1;
+  font-family: "PT Serif", serif;
+}
+
+#about-me .container .about h2 {
+  font-size: 2.5rem;
+}
+
+#about-me .container .about span {
+  font-family: "PT Serif", serif;
+  font-size: 1.25rem;
+}
+
 @-webkit-keyframes arrows {
   from {
     opacity: 1;
@@ -708,6 +889,8 @@ body {
     margin: 1rem;
   }
   .arrows button {
+    -webkit-box-shadow: 5px 3px 10px rgba(0, 0, 0, 0.15);
+            box-shadow: 5px 3px 10px rgba(0, 0, 0, 0.15);
     cursor: pointer;
     outline: none;
     width: 3rem;
@@ -723,7 +906,7 @@ body {
     transition: background-color 0.2s;
   }
   .arrows button:hover {
-    background-color: #c46962;
+    background-color: #c8726c;
   }
 }
 /*# sourceMappingURL=main.css.map */

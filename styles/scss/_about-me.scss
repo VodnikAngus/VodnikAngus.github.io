@@ -1,0 +1,123 @@
+@import "colors";
+#about-me {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  .accent-bubble {
+    z-index: 0;
+  }
+  .accent-bubble:nth-of-type(1) {
+    right: -25vmin;
+    top: -10vmin;
+    width: 50vmin;
+    height: 50vmin;
+  }
+
+  .accent-bubble:nth-of-type(2) {
+    bottom: -85vmin;
+    width: 100vmin;
+    height: 100vmin;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    z-index: 1;
+
+    width: 90%;
+    max-width: 50rem;
+
+    .profile {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+
+      img {
+        margin-right: 1rem;
+        border-radius: 2000px;
+      }
+      h1 {
+        line-height: 1.2;
+      }
+      h3 {
+        line-height: 1.2;
+        font-weight: 500;
+      }
+    }
+    .charts {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+      max-width: 100%;
+      flex-wrap: wrap;
+      .group {
+        display: flex;
+        align-items: center;
+      }
+      .chart {
+        &:first-child {
+          margin: 0;
+        }
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0.5rem;
+        width: 7rem;
+        height: 7rem;
+        background-color: $color-alt-bg;
+        border-radius: 2000px;
+        position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          width: 60%;
+          height: 60%;
+          border: 0.5rem $color-accent solid;
+          border-radius: 2000px;
+        }
+
+        div {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          clip-path: polygon(50% 0, 0 0, 0 100%, 50% 100%);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          &::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            border-radius: 0 2000px 2000px 0;
+            background-color: $color-alt-bg;
+            transform-origin: left;
+            transform: rotate(calc(var(--deg) * 1deg));
+          }
+        }
+        span {
+          z-index: 1;
+          font-family: "PT Serif", serif;
+        }
+      }
+    }
+    .about {
+      h2 {
+        font-size: 2.5rem;
+      }
+      span {
+        font-family: "PT Serif", serif;
+        font-size: 1.25rem;
+      }
+    }
+  }
+}

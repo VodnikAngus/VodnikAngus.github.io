@@ -3,6 +3,7 @@
 @import "../scss/languages";
 @import "../scss/bubbles";
 @import "../scss/themes";
+@import "../scss/about-me";
 
 @keyframes arrows {
   from {
@@ -215,6 +216,7 @@ body {
     z-index: 10;
     margin: 1rem;
     button {
+      box-shadow: 5px 3px 10px rgba(0, 0, 0, 0.15);
       cursor: pointer;
       outline: none;
       width: 3rem;
@@ -228,7 +230,7 @@ body {
       background-color: $color-accent;
       transition: background-color 0.2s;
       &:hover {
-        background-color: lighten($color-accent, 2.5%);
+        background-color: lighten($color-accent, 5%);
       }
     }
   }
