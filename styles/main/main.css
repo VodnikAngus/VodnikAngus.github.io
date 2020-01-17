@@ -606,6 +606,13 @@
   font-size: 1.25rem;
 }
 
+@media (max-width: 400px) {
+  #about-me .container .charts .chart {
+    width: 6rem;
+    height: 6rem;
+  }
+}
+
 @-webkit-keyframes arrows {
   from {
     opacity: 1;
