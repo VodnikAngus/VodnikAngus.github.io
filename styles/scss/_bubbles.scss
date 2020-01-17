@@ -46,25 +46,44 @@
     animation: to-top $delay $curve, from-bottom $speed $delay infinite $curve;
   }
 }
+
+@keyframes accent-b {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(var(--ofX), var(--ofY));
+  }
+}
+
 .accent-bubble {
+  --ofX: 0;
+  --ofY: 0;
   position: absolute;
   background-color: $color-accent;
   border-radius: 100000px;
+  animation: accent-b 0.5s ease;
+  transform: translate(var(--ofX), var(--ofY));
+  transition: transform 0.5s;
+  z-index: 2;
 }
 
 #home .accent-bubble:nth-of-type(2) {
+  --ofX: 4vmin;
+  --ofY: 2vmin;
   height: 80vmin;
   width: 80vmin;
 
-  top: -20vmin;
-  left: -45vmin;
+  bottom: -20vmin;
+  left: -50vmin;
 }
 #home .accent-bubble:nth-of-type(3) {
+  --ofY: 4vmin;
   height: 80vmin;
   width: 80vmin;
 
-  bottom: -65vmin;
-  left: 0vh;
+  top: -65vmin;
+  right: -30vmin;
 }
 
 @media (prefers-reduced-motion: reduce) {

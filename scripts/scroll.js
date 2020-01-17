@@ -36,6 +36,10 @@ function resized() {
 }
 
 window.addEventListener("scroll", function() {
+  this.document.body.style.setProperty(
+    "--scroll",
+    Math.max(window.scrollX, (window.scrollY / vh(100)) * vw(100))
+  );
   main.style.transform = `translateX(${(-window.scrollY / vh(100)) *
     vw(100)}px)`;
 });
