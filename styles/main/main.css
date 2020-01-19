@@ -422,7 +422,7 @@
 }
 
 #about-me {
-  overflow: hidden;
+  overflow: visible;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -613,6 +613,103 @@
   }
 }
 
+#projects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+  padding: 2rem 1rem;
+  padding-left: 5rem;
+}
+
+#projects > div {
+  z-index: 3;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: 0 1rem;
+  height: 100%;
+  background-color: var(--color-bg, #eeeeee);
+  overflow: hidden;
+  border-radius: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#projects > div img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+
+#projects > div > div {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  padding: 1rem 2rem;
+}
+
+#projects > div > div p {
+  text-indent: 2rem;
+}
+
+@media (max-aspect-ratio: 3 / 2) {
+  main #projects {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 1rem 2rem;
+    padding-left: 5rem;
+  }
+  main #projects > div {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    margin: 1rem 0;
+    position: relative;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    color: white;
+  }
+  main #projects > div::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5) -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(9.3%, rgba(0, 0, 0, 0.013)), color-stop(17.5%, rgba(0, 0, 0, 0.049)), color-stop(24.6%, rgba(0, 0, 0, 0.104)), color-stop(30.9%, rgba(0, 0, 0, 0.175)), color-stop(36.6%, rgba(0, 0, 0, 0.259)), color-stop(41.8%, rgba(0, 0, 0, 0.352)), color-stop(46.8%, rgba(0, 0, 0, 0.45)), color-stop(51.7%, rgba(0, 0, 0, 0.55)), color-stop(56.7%, rgba(0, 0, 0, 0.648)), color-stop(62.1%, rgba(0, 0, 0, 0.741)), color-stop(67.9%, rgba(0, 0, 0, 0.825)), color-stop(74.4%, rgba(0, 0, 0, 0.896)), color-stop(81.8%, rgba(0, 0, 0, 0.951)), color-stop(90.3%, rgba(0, 0, 0, 0.987)), to(black));
+    background: rgba(0, 0, 0, 0.5) linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.013) 9.3%, rgba(0, 0, 0, 0.049) 17.5%, rgba(0, 0, 0, 0.104) 24.6%, rgba(0, 0, 0, 0.175) 30.9%, rgba(0, 0, 0, 0.259) 36.6%, rgba(0, 0, 0, 0.352) 41.8%, rgba(0, 0, 0, 0.45) 46.8%, rgba(0, 0, 0, 0.55) 51.7%, rgba(0, 0, 0, 0.648) 56.7%, rgba(0, 0, 0, 0.741) 62.1%, rgba(0, 0, 0, 0.825) 67.9%, rgba(0, 0, 0, 0.896) 74.4%, rgba(0, 0, 0, 0.951) 81.8%, rgba(0, 0, 0, 0.987) 90.3%, black 100%);
+  }
+  main #projects > div img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  main #projects > div > div {
+    z-index: 2;
+    -webkit-box-flex: unset;
+        -ms-flex: unset;
+            flex: unset;
+    padding-bottom: 4rem;
+  }
+}
+
 @-webkit-keyframes arrows {
   from {
     opacity: 1;
@@ -654,8 +751,8 @@
 html {
   font-size: 16px;
   scroll-behavior: smooth;
-  -ms-scroll-snap-type: x proximity;
-      scroll-snap-type: x proximity;
+  -ms-scroll-snap-type: both proximity;
+      scroll-snap-type: both proximity;
 }
 
 body {
@@ -663,6 +760,10 @@ body {
   color: var(--color-fg, #333333);
   font-family: "Roboto slab", sans-serif;
   --scroll: 0;
+}
+
+p {
+  font-family: "PT serif", serif;
 }
 
 @media (max-width: 750px) {
@@ -702,44 +803,6 @@ main > div:nth-child(1) {
           justify-content: center;
 }
 
-main #projects {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: stretch;
-      -ms-flex-pack: stretch;
-          justify-content: stretch;
-  padding: 2rem 1rem;
-  padding-left: 5rem;
-}
-
-main #projects > div {
-  z-index: 3;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  margin: 0 1rem;
-  height: 100%;
-  background-color: var(--color-bg, #eeeeee);
-}
-
-@media (max-aspect-ratio: 3 / 2) {
-  main #projects {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    padding: 1rem 2rem;
-    padding-left: 5rem;
-  }
-  main #projects > div {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
-    margin: 1rem 0;
-  }
-}
-
 .scroller {
   position: absolute;
   top: 0;
@@ -758,6 +821,7 @@ main #projects > div {
 .scroller div {
   width: calc(var(--height) * var(--vw) / var(--vh));
   height: calc(100 * var(--vh));
+  scroll-snap-align: start;
 }
 
 .center {

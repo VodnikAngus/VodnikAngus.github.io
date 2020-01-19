@@ -4,6 +4,7 @@
 @import "../scss/bubbles";
 @import "../scss/themes";
 @import "../scss/about-me";
+@import "../scss/projects";
 
 @keyframes arrows {
   from {
@@ -22,14 +23,16 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 :root {
   --vh: 1vh;
   --vw: 1vw;
 }
+
 html {
   font-size: 16px;
   scroll-behavior: smooth;
-  scroll-snap-type: x proximity;
+  scroll-snap-type: both proximity;
 }
 
 body {
@@ -37,6 +40,10 @@ body {
   color: $color-fg;
   font-family: "Roboto slab", sans-serif;
   --scroll: 0;
+}
+
+p {
+  font-family: "PT serif", serif;
 }
 
 @media (max-width: 750px) {
@@ -56,7 +63,6 @@ main {
     position: relative;
     min-width: 100%;
     height: 100%;
-    //scroll-snap-align: start;
     background: #2b2d42;
 
     &:nth-child(1) {
@@ -64,32 +70,6 @@ main {
       display: flex;
       align-items: center;
       justify-content: center;
-    }
-  }
-  #projects {
-    display: flex;
-    justify-content: stretch;
-    padding: $padding $padding/2;
-    padding-left: $nav-width + $padding/2;
-    & > div {
-      z-index: 3;
-      flex: 1;
-      margin: 0 $padding/2;
-      height: 100%;
-      background-color: $color-bg;
-    }
-  }
-}
-@media (max-aspect-ratio: 3/2) {
-  main #projects {
-    flex-direction: column;
-
-    padding: $padding/2 $padding;
-    padding-left: $nav-width + $padding/2;
-
-    & > div {
-      flex: 1;
-      margin: $padding/2 0;
     }
   }
 }
@@ -105,6 +85,7 @@ main {
   div {
     width: calc(var(--height) * var(--vw) / var(--vh));
     height: calc(100 * var(--vh));
+    scroll-snap-align: start;
   }
 }
 

@@ -1,0 +1,88 @@
+#projects {
+  display: flex;
+  justify-content: stretch;
+  padding: $padding $padding/2;
+  padding-left: $nav-width + $padding/2;
+  & > div {
+    z-index: 3;
+    flex: 1;
+    margin: 0 $padding/2;
+    height: 100%;
+    background-color: $color-bg;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    img {
+      width: 100%;
+      object-fit: cover;
+      flex: 2;
+    }
+    & > div {
+      flex: 3;
+      padding: 1rem 2rem;
+      p {
+        text-indent: 2rem;
+      }
+    }
+  }
+}
+
+@media (max-aspect-ratio: 3/2) {
+  main #projects {
+    flex-direction: column;
+
+    padding: $padding/2 $padding;
+    padding-left: $nav-width + $padding/2;
+
+    & > div {
+      flex: 1;
+      margin: $padding/2 0;
+      position: relative;
+      justify-content: flex-end;
+      color:white;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5)
+          linear-gradient(
+            to bottom,
+            hsla(0, 0%, 0%, 0) 0%,
+            hsla(0, 0%, 0%, 0.013) 9.3%,
+            hsla(0, 0%, 0%, 0.049) 17.5%,
+            hsla(0, 0%, 0%, 0.104) 24.6%,
+            hsla(0, 0%, 0%, 0.175) 30.9%,
+            hsla(0, 0%, 0%, 0.259) 36.6%,
+            hsla(0, 0%, 0%, 0.352) 41.8%,
+            hsla(0, 0%, 0%, 0.45) 46.8%,
+            hsla(0, 0%, 0%, 0.55) 51.7%,
+            hsla(0, 0%, 0%, 0.648) 56.7%,
+            hsla(0, 0%, 0%, 0.741) 62.1%,
+            hsla(0, 0%, 0%, 0.825) 67.9%,
+            hsla(0, 0%, 0%, 0.896) 74.4%,
+            hsla(0, 0%, 0%, 0.951) 81.8%,
+            hsla(0, 0%, 0%, 0.987) 90.3%,
+            hsl(0, 0%, 0%) 100%
+          );
+      }
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+      }
+      & > div {
+        z-index: 2;
+        flex: unset;
+        padding-bottom: 4rem;
+      }
+    }
+  }
+}
