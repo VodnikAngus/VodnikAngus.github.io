@@ -670,7 +670,7 @@
         -ms-flex-direction: column;
             flex-direction: column;
     padding: 1rem 2rem;
-    padding-left: 5rem;
+    padding-left: 6rem;
   }
   main #projects > div {
     -webkit-box-flex: 1;

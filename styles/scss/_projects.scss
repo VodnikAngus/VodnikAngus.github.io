@@ -33,14 +33,14 @@
     flex-direction: column;
 
     padding: $padding/2 $padding;
-    padding-left: $nav-width + $padding/2;
+    padding-left: $nav-width + $padding;
 
     & > div {
       flex: 1;
       margin: $padding/2 0;
       position: relative;
       justify-content: flex-end;
-      color:white;
+      color: white;
 
       &::before {
         content: "";
