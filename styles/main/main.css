@@ -601,9 +601,10 @@
   font-size: 2.5rem;
 }
 
-#about-me .container .about span {
+#about-me .container .about p {
   font-family: "PT Serif", serif;
   font-size: 1.25rem;
+  text-indent: 2rem;
 }
 
 @media (max-width: 400px) {
