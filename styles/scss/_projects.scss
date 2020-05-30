@@ -4,6 +4,7 @@
   padding: $padding $padding/2;
   padding-left: $nav-width + $padding/2;
   & > div {
+    position: relative;
     z-index: 3;
     flex: 1;
     margin: 0 $padding/2;
@@ -13,6 +14,7 @@
     border-radius: 0.5rem;
     display: flex;
     flex-direction: column;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     img {
       width: 100%;
       object-fit: cover;
@@ -24,6 +26,10 @@
       p {
         text-indent: 2rem;
       }
+    }
+    &:hover {
+      transform: scale(1.02);
+      box-shadow: 0.5rem 0.5rem 1rem rgba(33, 0, 43, 0.5);
     }
   }
 }

@@ -1,173 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, minimum-scale=1.0, initial-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="../styles/main/main.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=PT+Serif|Roboto+Slab&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Portfolio</title>
-  <link rel="stylesheet" href="../styles/main/main.css" />
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css?family=PT+Serif|Roboto+Slab&display=swap" rel="stylesheet">
-</head>
-
-<body>
-  <nav id="sidebar">
-    <div class="background" onclick="toggleBurger(false)"></div>
-    <ul>
-      <li>
-        <a onclick="toggleBurger()">
-          <div class="burger" id="burger">
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-          <span>Meni</span>
-        </a>
-      </li>
-      <div class="divider"></div>
-      <li>
-        <a href="#" onclick="toggleBurger(false)">
-          <i class="material-icons">home</i>
-          <span>Početak</span>
-        </a>
-      </li>
-      <li>
-        <a href="#projects-slide" onclick="toggleBurger(false)">
-          <i class="material-icons">work</i>
-          <span>Projekti</span>
-        </a>
-      </li>
-      <li>
-        <a href="#about-me-slide" onclick="toggleBurger(false)">
-          <i class="material-icons">person</i>
-          <span>O meni</span>
-        </a>
-      </li>
-      <div class="divider"></div>
-      <li>
-        <a onclick="changeTheme()">
-          <i class="material-icons">color_lens</i>
-          <span>Tema</span>
-        </a>
-      </li>
-      <li>
-        <a onclick="changeLanguage()">
-          <i class="material-icons">flag</i>
-          <span>Jezici</span>
-        </a>
-      </li>
-    </ul>
-  </nav>
-  <main id="slides">
-    <div id="home">
-      <div id="bubbles"></div>
-      <div class="accent-bubble"></div>
-      <div class="accent-bubble"></div>
-      <div class="center">
-        <h1>portfolio</h1>
-        <h3>
-          Gravida est su eu.<br />
-          Sit eu nunc sagittis, gravida.
-        </h3>
+  <body>
+    <nav id="sidebar">
+      <div class="background" onclick="toggleBurger(false)"></div>
+      <ul>
+        <li>
+          <a onclick="toggleBurger()">
+            <div class="burger" id="burger">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <span>Meni</span>
+          </a>
+        </li>
+        <div class="divider"></div>
+        <li>
+          <a href="#" onclick="toggleBurger(false)">
+            <i class="material-icons">home</i>
+            <span>Početak</span>
+          </a>
+        </li>
+        <li>
+          <a href="#projects-slide" onclick="toggleBurger(false)">
+            <i class="material-icons">work</i>
+            <span>Projekti</span>
+          </a>
+        </li>
+        <li>
+          <a href="#about-me-slide" onclick="toggleBurger(false)">
+            <i class="material-icons">person</i>
+            <span>O meni</span>
+          </a>
+        </li>
+        <div class="divider"></div>
+        <li>
+          <a onclick="changeTheme()">
+            <i class="material-icons">color_lens</i>
+            <span>Tema</span>
+          </a>
+        </li>
+        <li>
+          <a onclick="changeLanguage()">
+            <i class="material-icons">flag</i>
+            <span>Jezici</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main id="slides">
+      <div id="home">
+        <div id="bubbles"></div>
         <div class="accent-bubble"></div>
-      </div>
-      <div class="arrow">
-        <span class="scroll-down">
-          scroll
-          <i class="material-icons">keyboard_arrow_down</i>
-        </span>
-        <span class="swipe-right">
-          swipe
-          <i class="material-icons">keyboard_arrow_right</i><i class="material-icons">keyboard_arrow_right</i><i
-            class="material-icons">keyboard_arrow_right</i>
-        </span>
-      </div>
-    </div>
-    <div id="projects">
-      <div>
-        <img src="https://picsum.photos/500/300.webp?random=1" alt="Me">
-        <div>
-          <h1>Project 1</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum tempore quidem hic nostrum laudantium error
-            nisi beatae, consequuntur saepe voluptas quis quam suscipit voluptate porro assumenda tempora! Fugiat
-            asperiores, maiores voluptatibus libero quasi reiciendis.</p>
+        <div class="accent-bubble"></div>
+        <div class="center">
+          <h1>portfolio</h1>
+          <h3>
+            Malo godina,<br />
+            mnogo iskustva.
+          </h3>
+          <div class="accent-bubble"></div>
+        </div>
+        <div class="arrow">
+          <span class="scroll-down">
+            scroll
+            <i class="material-icons">keyboard_arrow_down</i>
+          </span>
+          <span class="swipe-right">
+            swipe
+            <i class="material-icons">keyboard_arrow_right</i
+            ><i class="material-icons">keyboard_arrow_right</i
+            ><i class="material-icons">keyboard_arrow_right</i>
+          </span>
         </div>
       </div>
-      <div>
-        <img src="https://picsum.photos/500/300.webp?random=2" alt="Me">
+      <div id="projects">
         <div>
-          <h1>Project 2</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum tempore quidem hic nostrum laudantium error
-            nisi beatae, consequuntur saepe voluptas quis quam suscipit voluptate porro assumenda tempora! Fugiat
-            asperiores, maiores voluptatibus libero quasi reiciendis.</p>
-        </div>
-      </div>
-      <div>
-        <img src="https://picsum.photos/500/300.webp?random=3" alt="Me">
-        <div>
-          <h1>Project 3</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum tempore quidem hic nostrum laudantium error
-            nisi beatae, consequuntur saepe voluptas quis quam suscipit voluptate porro assumenda tempora! Fugiat
-            asperiores, maiores voluptatibus libero quasi reiciendis.</p>
-        </div>
-      </div>
-    </div>
-    <div id="about-me">
-      <div class="accent-bubble"></div>
-      <div class="accent-bubble"></div>
-      <div class="container">
-        <div class="profile">
-          <img src="https://picsum.photos/100/100" alt="Me">
+          <img src="/images/projekat1.png" alt="Portfolio" />
           <div>
-            <h1>Petar Radojević</h1>
-            <h3>Developer</h3>
+            <h1>Portfolio</h1>
+            <p>
+              Jedan od mojih najdražih projekata. Čisto platno za dodavanje svih
+              ideja koje su mi delovale zanimljivo: pomeranje sajta u stranu,
+              animacije balončića, promena jezika i teme, crtanje grafika, divan
+              dizajn... Sve urađeno bez tuđih biblioteka i koda, samo HTML, SCSS
+              i JavaScript.
+            </p>
           </div>
         </div>
-        <div class="charts">
-          <div class="group">
-            <div class="chart">
-              <div style="--deg: -135"></div>
-              <span>HTML</span>
-            </div>
-            <div class="chart">
-              <div style="--deg: -95"></div>
-              <span>CSS</span>
-            </div>
-          </div>
-          <div class="group">
-            <div class="chart">
-              <div style="--deg: -95"></div>
-              <span>JS</span>
-            </div>
-            <div class="chart">
-              <div style="--deg: -155"></div>
-              <span>AI</span>
-            </div>
+        <div>
+          <img src="/images/projekat2.png" alt="Tablić" />
+          <div>
+            <h1>Tablić</h1>
+            <p>
+              Tablić je veoma popularna igra na predelu Balkana. Mnogi ljudi,
+              poput mog dede, uživaju u ovoj igri, ali ja nisam bio u mogućnosti
+              da nađem igricu za kompjuter koja je radila kako treba. Zato sam u
+              poduhvatu da iznenadim svog dedu napravio ovu poznatu igricu. Ova
+              naizgled jednostavna igrica je dosta komplikovanija nego što
+              izgleda što objašnjava njen očiti nedostatak na internetu.
+            </p>
+            <a
+              href="https://vodnikangus.github.io/flutter-tablic"
+              target="_blank"
+            >
+              Pogledaj
+            </a>
           </div>
         </div>
-        <div class="about">
-          <h2>Me</h2>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque reiciendis voluptatum fugiat dolorem?
-            Quaerat quia, harum nihil maxime provident dolore ipsam vitae impedit animi ut laudantium dolores laboriosam
-            sint adipisci rerum accusantium explicabo deserunt incidunt asperiores et quas quidem fuga? Vel tenetur
-            deleniti nostrum ex. Qui at facilis nam quo.
-          </p>
+        <div>
+          <img src="/images/projekat3.png" alt='Sajt etš "Rade Končar"' />
+          <div>
+            <h1>Sajt etš "Rade Končar"</h1>
+            <p>
+              Sajt moje škole je kroz godine menjao izgled, ali svaki put bi me
+              raočarao. Sajt je pravljen uz pomoć WordPress alata koji je veoma
+              spor i koristi svima dostupne teme. Izgleda veoma dosadno i
+              učitava se dugo, pogotovo na slabijim mrežama. Kroz godine je
+              takođe imao i veliki broj grešaka pri korišćenju gotovih tema gde
+              na primer za naslov stoji "Title", a u podnaslovu piše Rade Končar
+            </p>
+            <a href="https://vodnikangus.github.io/koncar-sajt" target="_blank">
+              Pogledaj
+            </a>
+          </div>
         </div>
       </div>
-  </main>
+      <div id="about-me">
+        <div class="accent-bubble"></div>
+        <div class="accent-bubble"></div>
+        <div class="container">
+          <div class="profile">
+            <img src="/images/ja.jpg" alt="Ja" />
+            <div>
+              <h1>Petar Radojević</h1>
+              <h3>Developer</h3>
+            </div>
+          </div>
+          <div class="charts">
+            <div class="group">
+              <div class="chart">
+                <div style="--deg: -65;"></div>
+                <span>HTML</span>
+              </div>
+              <div class="chart">
+                <div style="--deg: -45;"></div>
+                <span>CSS</span>
+              </div>
+            </div>
+            <div class="group">
+              <div class="chart">
+                <div style="--deg: -45;"></div>
+                <span>JS</span>
+              </div>
+            </div>
+          </div>
+          <div class="about">
+            <h2>O meni</h2>
+            <p>
+              Talentovani osamnaestogodišnjak sa odličnim znanjem o svojoj
+              oblasti. Za mali broj godina video sam veliki broj odličnih i loše
+              odrađenih sajtova i razumem njihove najbitnije razlike. Najveći
+              trud ulažem u to da moji sajtovi rade brzo i izgledaju lepo.
+              Najviše volim da koristim sajtove bez biblioteka, ali imam
+              iskustva sa nekim od najpoznatijih (React, Svelte i Flutter).
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
 
-  <div class="arrows">
-    <button onclick="scrollL()"><i class="material-icons">keyboard_arrow_left</i></button>
-    <button onclick="scrollR()"><i class="material-icons">keyboard_arrow_right</i></button onclick="scrollL()">
-  </div>
+    <div class="arrows">
+      <button onclick="scrollL()">
+        <i class="material-icons">keyboard_arrow_left</i>
+      </button>
+      <button onclick="scrollR()">
+        <i class="material-icons">keyboard_arrow_right</i>
+      </button>
+    </div>
 
-  <script src="../scripts/themes.js"></script>
-  <script src="../scripts/languages.js"></script>
-  <script src="../scripts/sidebar.js"></script>
-  <script src="../scripts/scroll.js"></script>
-  <script src="../scripts/bubbles.js"></script>
-</body>
-
+    <script defer src="../scripts/themes.js"></script>
+    <script defer src="../scripts/languages.js"></script>
+    <script defer src="../scripts/sidebar.js"></script>
+    <script defer src="../scripts/scroll.js"></script>
+    <script defer src="../scripts/bubbles.js"></script>
+  </body>
 </html>

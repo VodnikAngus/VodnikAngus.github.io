@@ -1,65 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, minimum-scale=1.0, initial-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="../styles/main/main.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Portfolio</title>
-  <link rel="stylesheet" href="../styles/main/main.css" />
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet" />
-</head>
-
-<body>
-  <nav id="sidebar">
-    <div class="background" onclick="toggleBurger(false)"></div>
-    <ul>
-      <li>
-        <a onclick="toggleBurger()">
-          <div class="burger" id="burger">
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-          <span>Menu</span>
-        </a>
-      </li>
-      <div class="divider"></div>
-      <li>
-        <a href="#" onclick="toggleBurger(false)">
-          <i class="material-icons">home</i>
-          <span>Home</span>
-        </a>
-      </li>
-      <li>
-        <a href="#projects-slide" onclick="toggleBurger(false)">
-          <i class="material-icons">work</i>
-          <span>Projects</span>
-        </a>
-      </li>
-      <li>
-        <a href="#about-me-slide" onclick="toggleBurger(false)">
-          <i class="material-icons">person</i>
-          <span>About me</span>
-        </a>
-      </li>
-      <div class="divider"></div>
-      <li>
-        <a onclick="changeTheme()">
-          <i class="material-icons">color_lens</i>
-          <span>Theme</span>
-        </a>
-      </li>
-      <li>
-        <a onclick="changeLanguage()">
-          <i class="material-icons">flag</i>
-          <span>Languages</span>
-        </a>
-      </li>
-    </ul>
-  </nav>
-  <div class="fixed">
+  <body>
+    <nav id="sidebar">
+      <div class="background" onclick="toggleBurger(false)"></div>
+      <ul>
+        <li>
+          <a onclick="toggleBurger()">
+            <div class="burger" id="burger">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <span>Menu</span>
+          </a>
+        </li>
+        <div class="divider"></div>
+        <li>
+          <a href="#" onclick="toggleBurger(false)">
+            <i class="material-icons">home</i>
+            <span>Home</span>
+          </a>
+        </li>
+        <li>
+          <a href="#projects-slide" onclick="toggleBurger(false)">
+            <i class="material-icons">work</i>
+            <span>Projects</span>
+          </a>
+        </li>
+        <li>
+          <a href="#about-me-slide" onclick="toggleBurger(false)">
+            <i class="material-icons">person</i>
+            <span>About me</span>
+          </a>
+        </li>
+        <div class="divider"></div>
+        <li>
+          <a onclick="changeTheme()">
+            <i class="material-icons">color_lens</i>
+            <span>Theme</span>
+          </a>
+        </li>
+        <li>
+          <a onclick="changeLanguage()">
+            <i class="material-icons">flag</i>
+            <span>Languages</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
     <main id="slides">
       <div id="home">
         <div id="bubbles"></div>
@@ -68,8 +75,8 @@
         <div class="center">
           <h1>portfolio</h1>
           <h3>
-            Gravida est su eu.<br />
-            Sit eu nunc sagittis, gravida.
+            Young and <br />
+            full of experience
           </h3>
           <div class="accent-bubble"></div>
         </div>
@@ -80,40 +87,59 @@
           </span>
           <span class="swipe-right">
             swipe
-            <i class="material-icons">keyboard_arrow_right</i><i class="material-icons">keyboard_arrow_right</i><i
-              class="material-icons">keyboard_arrow_right</i>
+            <i class="material-icons">keyboard_arrow_right</i
+            ><i class="material-icons">keyboard_arrow_right</i
+            ><i class="material-icons">keyboard_arrow_right</i>
           </span>
         </div>
       </div>
       <div id="projects">
         <div>
-          <img src="https://picsum.photos/500/300.webp?random=1" alt="Me">
+          <img src="/images/projekat1.png" alt="Portfolio" />
           <div>
-            <h1>Project 1</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum tempore quidem hic nostrum laudantium
-              error
-              nisi beatae, consequuntur saepe voluptas quis quam suscipit voluptate porro assumenda tempora! Fugiat
-              asperiores, maiores voluptatibus libero quasi reiciendis.</p>
+            <h1>Portfolio</h1>
+            <p>
+              One of my favorite projects. Clean canvas for implementing all
+              ideas I could imagine: vertical scrolling, bubble animations,
+              changing languages and themes, drawing charts, good looking
+              design... All made without 3rd party libraries, only HTML, SCSS
+              and Javascript.
+            </p>
           </div>
         </div>
         <div>
-          <img src="https://picsum.photos/500/300.webp?random=2" alt="Me">
+          <img src="/images/projekat2.png" alt="Tablić" />
           <div>
-            <h1>Project 2</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum tempore quidem hic nostrum laudantium
-              error
-              nisi beatae, consequuntur saepe voluptas quis quam suscipit voluptate porro assumenda tempora! Fugiat
-              asperiores, maiores voluptatibus libero quasi reiciendis.</p>
+            <h1>Tablić</h1>
+            <p>
+              Tablić is a very popular game in the Balkans. Many people, like my
+              grandfather, enjoy this game, but I was not able to find a
+              computer game that worked properly. That's why I made this famous
+              game in an effort to surprise my grandfather. This game is not as
+              simple as it seems, which explains
+            </p>
+            <a
+              href="https://vodnikangus.github.io/flutter-tablic"
+              target="_blank"
+            >
+              Look here
+            </a>
           </div>
         </div>
         <div>
-          <img src="https://picsum.photos/500/300.webp?random=3" alt="Me">
+          <img src="/images/projekat3.png" alt="My schools website" />
           <div>
-            <h1>Project 3</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum tempore quidem hic nostrum laudantium
-              error
-              nisi beatae, consequuntur saepe voluptas quis quam suscipit voluptate porro assumenda tempora! Fugiat
-              asperiores, maiores voluptatibus libero quasi reiciendis.</p>
+            <h1>My school's website</h1>
+            <p>
+              My school's website has changed its appearance over the years, but
+              it never failed to dissapoint me. The site was made with the help
+              of WordPress, which is very slow and utilizes commonly used
+              themes. it looks dull and takes forever to load, especially on
+              weaker networks.
+            </p>
+            <a href="https://vodnikangus.github.io/koncar-sajt" target="_blank">
+              Look here
+            </a>
           </div>
         </div>
       </div>
@@ -122,7 +148,7 @@
         <div class="accent-bubble"></div>
         <div class="container">
           <div class="profile">
-            <img src="https://picsum.photos/100/100" alt="Me">
+            <img src="/images/ja.jpg" alt="Me" />
             <div>
               <h1>Petar Radojević</h1>
               <h3>Developer</h3>
@@ -131,49 +157,50 @@
           <div class="charts">
             <div class="group">
               <div class="chart">
-                <div style="--deg: -135"></div>
+                <div style="--deg: -65;"></div>
                 <span>HTML</span>
               </div>
               <div class="chart">
-                <div style="--deg: -95"></div>
+                <div style="--deg: -45;"></div>
                 <span>CSS</span>
               </div>
             </div>
             <div class="group">
               <div class="chart">
-                <div style="--deg: -95"></div>
+                <div style="--deg: -45;"></div>
                 <span>JS</span>
-              </div>
-              <div class="chart">
-                <div style="--deg: -155"></div>
-                <span>AI</span>
               </div>
             </div>
           </div>
           <div class="about">
-            <h2>Me</h2>
+            <h2>About me</h2>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque reiciendis voluptatum fugiat dolorem?
-              Quaerat quia, harum nihil maxime provident dolore ipsam vitae impedit animi ut laudantium dolores
-              laboriosam
-              sint adipisci rerum accusantium explicabo deserunt incidunt asperiores et quas quidem fuga? Vel tenetur
-              deleniti nostrum ex. Qui at facilis nam quo.
+              Talented 18yo with great knowlage of my field. For my young age
+              I've had a lot of experience, I've seen a lot of great and bad
+              designed websites and I've learned to recognize their biggest
+              differences. I invest most effort in making websites that look
+              good and run fast. I enjoy using frameworkless sites the most but
+              I have experience with some of most used frameworks (React,
+              Svelte, Flutter).
             </p>
           </div>
         </div>
+      </div>
     </main>
-  </div>
 
-  <div class="arrows">
-    <button onclick="scrollL()"><i class="material-icons">keyboard_arrow_left</i></button>
-    <button onclick="scrollR()"><i class="material-icons">keyboard_arrow_right</i></button onclick="scrollL()">
-  </div>
+    <div class="arrows">
+      <button onclick="scrollL()">
+        <i class="material-icons">keyboard_arrow_left</i>
+      </button>
+      <button onclick="scrollR()">
+        <i class="material-icons">keyboard_arrow_right</i>
+      </button>
+    </div>
 
-  <script src="../scripts/themes.js"></script>
-  <script src="../scripts/languages.js"></script>
-  <script src="../scripts/sidebar.js"></script>
-  <script src="../scripts/scroll.js"></script>
-  <script src="../scripts/bubbles.js"></script>
-</body>
-
+    <script defer src="../scripts/themes.js"></script>
+    <script defer src="../scripts/languages.js"></script>
+    <script defer src="../scripts/sidebar.js"></script>
+    <script defer src="../scripts/scroll.js"></script>
+    <script defer src="../scripts/bubbles.js"></script>
+  </body>
 </html>
