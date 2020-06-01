@@ -20,53 +20,55 @@
   </head>
 
   <body>
-    <nav id="sidebar">
-      <div class="background" onclick="toggleBurger(false)"></div>
-      <ul>
-        <li>
-          <a onclick="toggleBurger()">
-            <div class="burger" id="burger">
-              <div></div>
-              <div></div>
-              <div></div>
-            </div>
-            <span>Meni</span>
-          </a>
-        </li>
-        <div class="divider"></div>
-        <li>
-          <a href="#" onclick="toggleBurger(false)">
-            <i class="material-icons">home</i>
-            <span>Početak</span>
-          </a>
-        </li>
-        <li>
-          <a href="#projects-slide" onclick="toggleBurger(false)">
-            <i class="material-icons">work</i>
-            <span>Projekti</span>
-          </a>
-        </li>
-        <li>
-          <a href="#about-me-slide" onclick="toggleBurger(false)">
-            <i class="material-icons">person</i>
-            <span>O meni</span>
-          </a>
-        </li>
-        <div class="divider"></div>
-        <li>
-          <a onclick="changeTheme()">
-            <i class="material-icons">color_lens</i>
-            <span>Tema</span>
-          </a>
-        </li>
-        <li>
-          <a onclick="changeLanguage()">
-            <i class="material-icons">flag</i>
-            <span>Jezici</span>
-          </a>
-        </li>
-      </ul>
-    </nav>
+    <aside>
+      <nav id="sidebar">
+        <div class="background" onclick="toggleBurger(false)"></div>
+        <ul>
+          <li>
+            <button onclick="toggleBurger()">
+              <div class="burger" id="burger">
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+              <span>Meni</span>
+            </button>
+          </li>
+          <li class="divider"></li>
+          <li>
+            <a href="#" onclick="toggleBurger(false)">
+              <i class="material-icons">home</i>
+              <span>Početak</span>
+            </a>
+          </li>
+          <li>
+            <a href="#projects-slide" onclick="toggleBurger(false)">
+              <i class="material-icons">work</i>
+              <span>Projekti</span>
+            </a>
+          </li>
+          <li>
+            <a href="#about-me-slide" onclick="toggleBurger(false)">
+              <i class="material-icons">person</i>
+              <span>O meni</span>
+            </a>
+          </li>
+          <li class="divider"></li>
+          <li>
+            <button onclick="changeTheme()">
+              <i class="material-icons">color_lens</i>
+              <span>Tema</span>
+            </button>
+          </li>
+          <li>
+            <button onclick="changeLanguage()">
+              <i class="material-icons">flag</i>
+              <span>Jezici</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </aside>
     <main id="slides">
       <div id="home">
         <div id="bubbles"></div>

@@ -1,6 +1,6 @@
-@import "colors";
-@import "values";
-@import "hamburger";
+@import 'colors';
+@import 'values';
+@import 'hamburger';
 
 @keyframes op {
   from {
@@ -13,6 +13,21 @@
 
 a {
   color: #fa8279;
+}
+
+button {
+  font-family: inherit;
+  text-transform: none;
+  overflow: visible;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  -webkit-appearance: button;
+  background-color: transparent;
+  border: none;
+  &:focus {
+    outline: none;
+  }
 }
 
 #sidebar {
@@ -65,7 +80,8 @@ a {
       --height: calc(#{$nav-width} * 1 / 2.4);
       list-style: none;
 
-      a {
+      a,
+      button {
         color: $color-fg;
         text-decoration: none;
         white-space: nowrap;
@@ -100,6 +116,7 @@ a {
           border-radius: 0 0.5rem 0.5rem 0;
         }
         &:hover,
+        &:focus,
         .burger:hover {
           background-color: $color-alt-bg-hover;
           span {
