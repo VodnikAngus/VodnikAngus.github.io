@@ -8,7 +8,7 @@
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Portfolio</title>
-    <link rel="stylesheet" href="../styles/main/main.css" />
+    <link rel="stylesheet" href="/styles/main/main.min.css" />
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
@@ -20,53 +20,55 @@
   </head>
 
   <body>
-    <nav id="sidebar">
-      <div class="background" onclick="toggleBurger(false)"></div>
-      <ul>
-        <li>
-          <a onclick="toggleBurger()">
-            <div class="burger" id="burger">
-              <div></div>
-              <div></div>
-              <div></div>
-            </div>
-            <span>Menu</span>
-          </a>
-        </li>
-        <div class="divider"></div>
-        <li>
-          <a href="#" onclick="toggleBurger(false)">
-            <i class="material-icons">home</i>
-            <span>Home</span>
-          </a>
-        </li>
-        <li>
-          <a href="#projects-slide" onclick="toggleBurger(false)">
-            <i class="material-icons">work</i>
-            <span>Projects</span>
-          </a>
-        </li>
-        <li>
-          <a href="#about-me-slide" onclick="toggleBurger(false)">
-            <i class="material-icons">person</i>
-            <span>About me</span>
-          </a>
-        </li>
-        <div class="divider"></div>
-        <li>
-          <a onclick="changeTheme()">
-            <i class="material-icons">color_lens</i>
-            <span>Theme</span>
-          </a>
-        </li>
-        <li>
-          <a onclick="changeLanguage()">
-            <i class="material-icons">flag</i>
-            <span>Languages</span>
-          </a>
-        </li>
-      </ul>
-    </nav>
+    <aside>
+      <nav id="sidebar">
+        <div class="background" onclick="toggleBurger(false)"></div>
+        <ul>
+          <li>
+            <a onclick="toggleBurger()">
+              <div class="burger" id="burger">
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+              <span>Menu</span>
+            </a>
+          </li>
+          <li class="divider"></li>
+          <li>
+            <a href="#" onclick="toggleBurger(false)">
+              <i class="material-icons">home</i>
+              <span>Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="#projects-slide" onclick="toggleBurger(false)">
+              <i class="material-icons">work</i>
+              <span>Projects</span>
+            </a>
+          </li>
+          <li>
+            <button href="#about-me-slide" onclick="toggleBurger(false)">
+              <i class="material-icons">person</i>
+              <span>About me</span>
+            </button>
+          </li>
+          <li class="divider"></li>
+          <li>
+            <button onclick="changeTheme()">
+              <i class="material-icons">color_lens</i>
+              <span>Theme</span>
+            </button>
+          </li>
+          <li>
+            <button onclick="changeLanguage()">
+              <i class="material-icons">flag</i>
+              <span>Languages</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </aside>
     <main id="slides">
       <div id="home">
         <div id="bubbles"></div>
@@ -238,10 +240,6 @@
       </button>
     </div>
 
-    <script defer src="../scripts/themes.js"></script>
-    <script defer src="../scripts/languages.js"></script>
-    <script defer src="../scripts/sidebar.js"></script>
-    <script defer src="../scripts/scroll.js"></script>
-    <script defer src="../scripts/bubbles.js"></script>
+    <script defer src="/scripts.min.js"></script>
   </body>
 </html>

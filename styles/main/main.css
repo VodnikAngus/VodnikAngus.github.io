@@ -730,7 +730,7 @@ button:focus {
             justify-content: flex-end;
     color: white;
   }
-  main #projects > div::before {
+  main #projects > div::after {
     content: '';
     position: absolute;
     top: 0;
