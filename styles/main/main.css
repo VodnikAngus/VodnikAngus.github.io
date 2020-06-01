@@ -181,6 +181,7 @@ button:focus {
 
 #sidebar ul li a,
 #sidebar ul li button {
+  max-width: 100%;
   color: var(--color-fg, #333333);
   text-decoration: none;
   white-space: nowrap;
